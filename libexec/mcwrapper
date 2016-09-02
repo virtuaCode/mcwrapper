@@ -538,7 +538,7 @@ function wait_for_minecraft_to_stop {
 }
 
 function server_log_path {
-  echo "${MINECRAFT_SERVER_DIR_PATH}/server.log"
+  echo "${MINECRAFT_SERVER_DIR_PATH}/logs/latest.log"
 }
 
 # check if a file exists
@@ -1218,7 +1218,7 @@ if [ "$BASH_SOURCE" == "$0" ]; then
       ;;
     log )
       sanity_check
-      warn "Tailing from: ${MINECRAFT_SERVER_DIR_PATH}/server.log"
+      warn "Tailing from: ${MINECRAFT_SERVER_DIR_PATH}/logs/latest.log"
       warn "Press ^C to cancel."
       warn "-------------------------------------------------------------------------------------------"
 
